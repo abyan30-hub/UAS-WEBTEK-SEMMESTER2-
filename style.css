@@ -1,0 +1,227 @@
+/* --- Root Variables untuk Kemudahan Kustomisasi Warna --- */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+    --success-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --warning-gradient: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    --danger-gradient: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    --bg-body: #f3f4f6;
+    --text-main: #1f2937;
+    --card-bg: #ffffff;
+}
+
+/* --- Base Reset --- */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    margin: 0;
+    padding: 30px 20px;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+/* --- Header Title --- */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* --- Cards / Kontainer Komponen --- */
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border: 1px solid rgba(243, 244, 246, 1);
+    transition: transform 0.2s ease;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    color: #4b5563;
+    border-left: 4px solid #667eea;
+    padding-left: 10px;
+}
+
+/* --- Layout Form (2 Kolom) --- */
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menyesuaikan urutan kolom form setelah pembersihan elemen duplikat */
+.form-group:nth-child(4), 
+.form-group:nth-child(5) {
+    grid-column: span 2;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    background-color: #f9fafb;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* Container untuk tombol form */
+.form-actions {
+    grid-column: span 2;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* --- Kolom Pencarian Modern --- */
+.search-box input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    background: var(--card-bg);
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 10px 15px -3px rgba(118, 75, 162, 0.1);
+}
+
+/* --- Desain Tabel yang Bersih & Elegan --- */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 14px 16px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+th:first-child { border-top-left-radius: 12px; }
+th:last-child { border-top-right-radius: 12px; }
+
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #f8fafc;
+}
+
+/* --- Desain Tombol Berwarna Gradasi --- */
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--secondary-gradient);
+    color: white;
+}
+
+.btn-edit {
+    background: var(--warning-gradient);
+    color: white;
+    margin-right: 5px;
+}
+
+.btn-delete {
+    background: var(--danger-gradient);
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+/* --- Responsive Breakpoint --- */
+@media (max-width: 640px) {
+    #contact-form {
+        grid-template-columns: 1fr;
+    }
+    .form-group:nth-child(4), 
+    .form-group:nth-child(5),
+    .form-actions {
+        grid-column: span 1;
+    }
+}

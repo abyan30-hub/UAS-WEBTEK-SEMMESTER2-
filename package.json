@@ -1,0 +1,13 @@
+{
+  "name": "aplikasi-daftar-kontak",
+  "version": "1.0.0",
+  "description": "Tugas Akhir Aplikasi Daftar Kontak - UAG",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
