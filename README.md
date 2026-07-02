@@ -18,6 +18,12 @@ Proyek ini dibangun untuk memenuhi komponen penilaian **Final Project** mata kul
 4. **Avatar Generator Dinamis:** Secara cerdas menghasilkan inisial profil bulat dengan warna latar belakang estetis unik berdasarkan nama kontak yang didaftarkan.
 5. **Layout Responsif (Mobile-First Ready):** Desain modern menggunakan CSS Grid fleksibel yang mendukung tampilan layar desktop, tablet, hingga layar HP/Mobile secara proporsional.
 
+## Link Youtube
+https://youtu.be/dVGracdrEvU
+
+## Link Google Drive
+https://drive.google.com/drive/folders/1E6-m9QTK3x1IhK1iFj3p6-PXpvc26fDv?usp=sharing
+
 ---
  Struktur Folder Proyek
 Struktur folder diorganisir secara rapi dan modular agar mudah dikembangkan:
@@ -34,8 +40,3 @@ kontak-app/
 ├── package.json           # Dependensi proyek Node.js
 └── README.md              # Dokumentasi proyek
 
-## Link Youtube
-https://youtu.be/dVGracdrEvU
-
-## Link Google Drive
-https://drive.google.com/drive/folders/1E6-m9QTK3x1IhK1iFj3p6-PXpvc26fDv?usp=sharing
